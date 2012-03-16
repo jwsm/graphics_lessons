@@ -24,11 +24,15 @@ var gameLoop = function() {
 /* --------------------------------------- */
 /* Mouse/Keyboard input */
 
+// start position of mouse (when clicked down)
 var start_mouse_x = 0;
 var start_mouse_y = 0;
+// latest position of mouse (while held down)
 var last_mouse_x = 0;
 var last_mouse_y = 0;
+// starting time (when clicked down)
 var start_mouse_time = 0;
+// the disc currently being drawn
 var newest_disc = null;
 
 // Process Mouse Click (down)
