@@ -26,7 +26,7 @@ int maxNumBalls = 50;
 int depth = -600;
 
 //3D or not
-boolean use_3d = true;
+boolean use_3d = false;
 
 
 // Balls
@@ -110,12 +110,10 @@ void createBallIfMouseClicked()
 
 		/* FILL IN CODE HERE to make a new ball */
 
-		Ball ball = new Ball(mouseX,mouseY);
-		ball.randomSize(30);
-		ball.randomSpeed(10);
-		ball.randomColor();
+			/* * * * */
 
-		addBall(ball);
+		//here's how you add it to the scene:
+		//addBall(ball);
 	}
 }
 
@@ -183,9 +181,8 @@ class Ball {
 
 		/* FILL IN CODE AFTER THIS LINE TO MOVE THE BALL */
 
-		x = x+dx;
-	    y = y+dy;
-	    z = z+dz;
+			/* * * * */
+
 	}
 
 	// bounceBall()
@@ -193,24 +190,9 @@ class Ball {
 	// to change direction, and should change its direction accordingly
 	void bounceBall() {
 		/* FILL IN CODE AFTER THIS LINE TO BOUNCE THE BALL */
-		if ((y - ballSize) < 0) {
-		   dy = dy * -1;
-		}
-		if ((y + ballSize) > height) {
-		   dy = dy * -1;
-		}
-		if ((x - ballSize) < 0) {
-		   dx = dx * -1;
-		}
-		if ((x + ballSize) > width) {
-		   dx = dx * -1;
-		}
-		if ((z - ballSize) < 0) {
-		   dz = dz * -1;
-		}
-		if ((z + ballSize) > depth) {
-		    dz = dz * -1;
-		}
+
+			/* * * * */
+
 	}
 
 	// drawBall()
@@ -221,16 +203,8 @@ class Ball {
 
 		/* FILL IN CODE AFTER THIS LINE TO DRAW THE BALL */
 
-		pushMatrix();
-		fill(ballColor);
-		if (use_3d) {
-			translate(x, y, z);
-			sphere(ballSize);
-		} else {
-			translate(x, y);
-			ellipse(0, 0, ballSize, ballSize);
-		}
-		popMatrix();
+			/* * * * */
+
 	}
 }
 
